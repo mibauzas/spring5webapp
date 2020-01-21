@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import com.mibauzas.spring5webapp.model.Author;
 import com.mibauzas.spring5webapp.model.Book;
 import com.mibauzas.spring5webapp.model.Publisher;
-import com.mibauzas.spring5webapp.repositories.AuthorRespository;
+import com.mibauzas.spring5webapp.repositories.AuthorRepository;
 import com.mibauzas.spring5webapp.repositories.BookRepository;
 import com.mibauzas.spring5webapp.repositories.PublisherRepository;
 
@@ -18,11 +18,11 @@ import com.mibauzas.spring5webapp.repositories.PublisherRepository;
 @Component
 public class DevBootstrap implements ApplicationListener<ContextRefreshedEvent> {
 
-	private AuthorRespository authorRepository;
+	private AuthorRepository authorRepository;
 	private BookRepository bookRepository;
 	private PublisherRepository publisherRepository;
 	
-	public DevBootstrap(AuthorRespository authorRepository, BookRepository bookRepository, PublisherRepository publisherRepository) {
+	public DevBootstrap(AuthorRepository authorRepository, BookRepository bookRepository, PublisherRepository publisherRepository) {
 		this.authorRepository = authorRepository;
 		this.bookRepository = bookRepository;
 		this.publisherRepository = publisherRepository; 

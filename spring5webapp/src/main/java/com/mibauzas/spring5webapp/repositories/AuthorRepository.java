@@ -4,6 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.mibauzas.spring5webapp.model.Author;
 
-public interface AuthorRespository extends CrudRepository<Author, Long>{
+public interface AuthorRepository extends CrudRepository<Author, Long>{
 
 }
